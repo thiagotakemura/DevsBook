@@ -13,3 +13,11 @@ $router->post('/login', 'LoginController@signinAction');
 //Rota Cadastro de Login
 $router->get('/cadastro', 'LoginController@signup');
 $router->post('/cadastro', 'LoginController@signupAction');
+
+//Rota Pesquisa
+//$router->get('/pesquisa');
+//$router->get('/perfil');
+//$router->get('/sair');
+//$router->get('/amigos');
+//$router->get('/fotos');
+//$router->get('/config');
