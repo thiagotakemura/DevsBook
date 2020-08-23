@@ -18,6 +18,7 @@ $router->post('/cadastro', 'LoginController@signupAction');
 $router->post('/post/new', 'PostController@new');
 
 //Rota Perfil
+$router->get('/perfil/{id}/fotos', 'ProfileController@photos');
 $router->get('/perfil/{id}/amigos', 'ProfileController@friends');
 $router->get('/perfil/{id}/follow', 'ProfileController@follow');
 $router->get('/perfil/{id}', 'ProfileController@index');
@@ -29,7 +30,10 @@ $router->get('/sair', 'LoginController@logout');
 //Rota Amigos
 $router->get('/amigos', 'ProfileController@friends');
 
+//Rota Fotos
+$router->get('/fotos', 'ProfileController@photos');
+
 //Rota Pesquisa
 //$router->get('/pesquisa');
-//$router->get('/fotos');
+
 //$router->get('/config');
