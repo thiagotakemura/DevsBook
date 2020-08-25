@@ -34,6 +34,6 @@ $router->get('/amigos', 'ProfileController@friends');
 $router->get('/fotos', 'ProfileController@photos');
 
 //Rota Pesquisa
-//$router->get('/pesquisa');
+$router->get('/pesquisa', 'SearchController@index');
 
 //$router->get('/config');

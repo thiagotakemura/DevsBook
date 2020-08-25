@@ -141,4 +141,22 @@ class UserHandler {
     public static function unFollow($from, $to) {
         UserRelation::delete()->where('user_from', $from)->where('user_to', $to)->execute();
     }
+
+    public static function searchUser($term) {
+        $data = User::select()->where('name', 'like', '%'.$term.'%')->get();
+        $users = [];
+
+        if($data) {
+            foreach($data as $user) {
+                $newUser = new User();
+                $newUser->id = $user['id'];
+                $newUser->name = $user['name'];
+                $newUser->avatar = $user['avatar'];
+
+                $users[] = $newUser;
+            }
+        }
+
+        return $users;
+    }
 }
